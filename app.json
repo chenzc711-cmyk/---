@@ -1,0 +1,33 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/dashboard/dashboard",
+    "pages/inventory/inventory",
+    "pages/inbound/inbound",
+    "pages/returns/returns",
+    "pages/outbound/outbound",
+    "pages/costs/costs"
+  ],
+  "window": {
+    "navigationBarTitleText": "拾纷电商管理系统",
+    "navigationBarBackgroundColor": "#ff0036",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#f7f8fa"
+  },
+  "tabBar": {
+    "color": "#6b7280",
+    "selectedColor": "#ff0036",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "white",
+    "list": [
+      { "pagePath": "pages/dashboard/dashboard", "text": "仪表盘" },
+      { "pagePath": "pages/inventory/inventory", "text": "库存" },
+      { "pagePath": "pages/inbound/inbound", "text": "入库" },
+      { "pagePath": "pages/returns/returns", "text": "退货" },
+      { "pagePath": "pages/outbound/outbound", "text": "出库" },
+      { "pagePath": "pages/costs/costs", "text": "成本" }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
