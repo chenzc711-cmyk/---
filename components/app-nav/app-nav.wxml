@@ -1,0 +1,14 @@
+<view class="nav-spacer"></view>
+<view class="app-nav">
+  <view
+    class="nav-item {{current === item.key ? 'active' : ''}}"
+    wx:for="{{items}}"
+    wx:key="key"
+    data-url="{{item.url}}"
+    data-key="{{item.key}}"
+    bindtap="goPage"
+  >
+    <view class="nav-icon">{{item.icon}}</view>
+    <view class="nav-text">{{item.text}}</view>
+  </view>
+</view>

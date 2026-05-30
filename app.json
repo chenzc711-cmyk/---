@@ -1,0 +1,22 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/dashboard/dashboard",
+    "pages/inventory/inventory",
+    "pages/inbound/inbound",
+    "pages/returns/returns",
+    "pages/outbound/outbound",
+    "pages/costs/costs"
+  ],
+  "window": {
+    "navigationBarTitleText": "拾纷电商管理系统",
+    "navigationBarBackgroundColor": "#ff0036",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#f7f8fa"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "app-nav": "/components/app-nav/app-nav"
+  }
+}

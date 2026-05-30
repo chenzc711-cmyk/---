@@ -1,0 +1,16 @@
+<view class="container"><view class="section-title">入库管理</view>
+  <view class="tm-card filter-card"><view class="field"><text class="label">按入库日期筛选</text><picker mode="date" value="{{filterDate}}" bindchange="onFilterDate"><view>{{filterDate || '选择日期查看入库记录'}}</view></picker></view><view class="btn-row"><button class="tm-btn secondary" bindtap="clearFilter">显示全部</button></view></view>
+  <view class="tm-card form-card"><view class="form-grid">
+    <view class="field"><text class="label">入库日期</text><picker mode="date" value="{{form.date}}" data-field="date" bindchange="onDateChange"><view>{{form.date || '选择日期'}}</view></picker></view>
+    <view class="field"><text class="label">商品名称</text><input value="{{form.name}}" data-field="name" bindinput="onInput" placeholder="商品名称" /></view>
+    <view class="field"><text class="label">商品规格</text><input value="{{form.spec}}" data-field="spec" bindinput="onInput" placeholder="商品规格" /></view>
+    <view class="field"><text class="label">商品单价</text><input type="digit" value="{{form.unitPrice}}" data-field="unitPrice" bindinput="onInput" placeholder="0.00" /></view>
+    <view class="field"><text class="label">商品数量</text><input type="number" value="{{form.quantity}}" data-field="quantity" bindinput="onInput" placeholder="0" /></view>
+    <view class="field"><text class="label">供应商</text><input value="{{form.supplier}}" data-field="supplier" bindinput="onInput" placeholder="供应商" /></view>
+    <view class="field"><text class="label">备注</text><textarea value="{{form.remark}}" data-field="remark" bindinput="onInput" placeholder="入库备注" /></view>
+  </view><view class="btn-row"><button class="tm-btn" bindtap="saveRecord">{{editingId ? '保存修改' : '添加入库信息'}}</button><button class="tm-btn secondary" bindtap="resetForm">清空</button></view></view>
+  <view class="toolbar"><button class="tm-btn secondary" bindtap="toggleSelectAll">{{allSelected ? '取消全选' : '全选'}}</button><button class="tm-btn dark" bindtap="deleteSelected">一键删除所选</button></view>
+  <view wx:if="{{records.length === 0}}" class="tm-card empty">暂无入库记录</view>
+  <view class="tm-card record-card" wx:for="{{records}}" wx:key="id"><view class="record-head"><label class="checkbox-line"><checkbox checked="{{selectedMap[item.id]}}" data-id="{{item.id}}" bindtap="toggleSelect"/><view><view class="record-title">{{item.name}}</view><view class="record-subtitle">{{item.date}} · {{item.spec}}</view></view></label><text class="action-link" data-id="{{item.id}}" bindtap="editRecord">编辑</text></view><view class="record-grid"><view class="kv">单价 <text>¥{{item.unitPrice}}</text></view><view class="kv">数量 <text>{{item.quantity}}</text></view><view class="kv">金额 <text>¥{{item.amount}}</text></view><view class="kv">供应商 <text>{{item.supplier}}</text></view><view class="kv">备注 <text>{{item.remark}}</text></view></view></view>
+</view>
+<app-nav current="inbound" />
