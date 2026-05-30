@@ -1,0 +1,41 @@
+.nav-spacer {
+  height: 132rpx;
+}
+.app-nav {
+  position: fixed;
+  left: 20rpx;
+  right: 20rpx;
+  bottom: 20rpx;
+  z-index: 20;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 6rpx;
+  padding: 12rpx 10rpx calc(12rpx + env(safe-area-inset-bottom));
+  border-radius: 30rpx;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 18rpx 46rpx rgba(17, 24, 39, 0.14);
+  border: 1rpx solid rgba(255, 0, 54, 0.08);
+  box-sizing: border-box;
+}
+.nav-item {
+  min-width: 0;
+  text-align: center;
+  color: #6b7280;
+  border-radius: 22rpx;
+  padding: 8rpx 0;
+}
+.nav-item.active {
+  color: #ff0036;
+  background: #fff0f3;
+  font-weight: 800;
+}
+.nav-icon {
+  font-size: 28rpx;
+  line-height: 30rpx;
+}
+.nav-text {
+  margin-top: 4rpx;
+  font-size: 20rpx;
+  line-height: 24rpx;
+  white-space: nowrap;
+}
