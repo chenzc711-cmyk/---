@@ -20,26 +20,11 @@
     "backgroundColor": "#ffffff",
     "borderStyle": "white",
     "list": [
-      {
-        "pagePath": "pages/dashboard/dashboard",
-        "text": "仪表盘"
-      },
-      {
-        "pagePath": "pages/inventory/inventory",
-        "text": "库存"
-      },
-      {
-        "pagePath": "pages/inbound/inbound",
-        "text": "入库"
-      },
-      {
-        "pagePath": "pages/returns/returns",
-        "text": "退货"
-      },
-      {
-        "pagePath": "pages/outbound/outbound",
-        "text": "出库"
-      }
+      { "pagePath": "pages/dashboard/dashboard", "text": "仪表盘" },
+      { "pagePath": "pages/inventory/inventory", "text": "库存" },
+      { "pagePath": "pages/inbound/inbound", "text": "入库" },
+      { "pagePath": "pages/returns/returns", "text": "退货" },
+      { "pagePath": "pages/outbound/outbound", "text": "出库" },
     ]
   },
   "style": "v2",
