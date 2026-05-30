@@ -1,0 +1,13 @@
+<view class="container"><view class="section-title">成本登记</view>
+  <view class="tm-card filter-card"><view class="field"><text class="label">按支出时间筛选</text><picker mode="date" value="{{filterDate}}" bindchange="onFilterDate"><view>{{filterDate || '选择日期查看成本记录'}}</view></picker></view><view class="btn-row"><button class="tm-btn secondary" bindtap="clearFilter">显示全部</button></view></view>
+  <view class="tm-card form-card"><view class="form-grid">
+    <view class="field"><text class="label">支出时间</text><picker mode="date" value="{{form.expenseDate}}" data-field="expenseDate" bindchange="onDateChange"><view>{{form.expenseDate || '选择日期'}}</view></picker></view>
+    <view class="field"><text class="label">支出金额</text><input type="digit" value="{{form.amount}}" data-field="amount" bindinput="onInput" placeholder="0.00" /></view>
+    <view class="field"><text class="label">支出用途</text><input value="{{form.purpose}}" data-field="purpose" bindinput="onInput" placeholder="支出用途" /></view>
+    <view class="field"><text class="label">支出分类</text><picker value="{{categoryIndex}}" range="{{categories}}" bindchange="onCategoryChange"><view>{{form.category || '选择分类'}}</view></picker></view>
+    <view class="field"><text class="label">备注</text><textarea value="{{form.remark}}" data-field="remark" bindinput="onInput" placeholder="备注" /></view>
+  </view><view class="btn-row"><button class="tm-btn" bindtap="saveRecord">{{editingId ? '保存修改' : '添加成本登记'}}</button><button class="tm-btn secondary" bindtap="resetForm">清空</button></view></view>
+  <view class="toolbar"><button class="tm-btn secondary" bindtap="toggleSelectAll">{{allSelected ? '取消全选' : '全选'}}</button><button class="tm-btn dark" bindtap="deleteSelected">一键删除所选</button></view>
+  <view wx:if="{{records.length === 0}}" class="tm-card empty">暂无成本记录</view>
+  <view class="tm-card record-card" wx:for="{{records}}" wx:key="id"><view class="record-head"><label class="checkbox-line"><checkbox checked="{{selectedMap[item.id]}}" data-id="{{item.id}}" bindtap="toggleSelect"/><view><view class="record-title">{{item.purpose}}</view><view class="record-subtitle">{{item.expenseDate}} · {{item.category}}</view></view></label><text class="action-link" data-id="{{item.id}}" bindtap="editRecord">编辑</text></view><view class="record-grid"><view class="kv">金额 <text>¥{{item.amount}}</text></view><view class="kv">分类 <text>{{item.category}}</text></view><view class="kv">备注 <text>{{item.remark}}</text></view></view></view>
+</view>
