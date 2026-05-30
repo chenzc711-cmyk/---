@@ -15,9 +15,6 @@ Page({
     if (!requireAuth()) return;
     this.refresh();
   },
-  goCosts() {
-    wx.navigateTo({ url: '/pages/costs/costs' });
-  },
   refresh() {
     const products = store.list('products');
     const inbound = store.list('inbound');

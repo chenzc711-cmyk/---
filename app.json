@@ -14,9 +14,19 @@
     "navigationBarTextStyle": "white",
     "backgroundColor": "#f7f8fa"
   },
+  "tabBar": {
+    "color": "#6b7280",
+    "selectedColor": "#ff0036",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "white",
+    "list": [
+      { "pagePath": "pages/dashboard/dashboard", "text": "仪表盘" },
+      { "pagePath": "pages/inventory/inventory", "text": "库存" },
+      { "pagePath": "pages/inbound/inbound", "text": "入库" },
+      { "pagePath": "pages/returns/returns", "text": "退货" },
+      { "pagePath": "pages/outbound/outbound", "text": "出库" },
+    ]
+  },
   "style": "v2",
-  "sitemapLocation": "sitemap.json",
-  "usingComponents": {
-    "app-nav": "/components/app-nav/app-nav"
-  }
+  "sitemapLocation": "sitemap.json"
 }

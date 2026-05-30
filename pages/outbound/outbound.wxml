@@ -13,4 +13,3 @@
   <view wx:if="{{records.length === 0}}" class="tm-card empty">暂无出库记录</view>
   <view class="tm-card record-card" wx:for="{{records}}" wx:key="id"><view class="record-head"><label class="checkbox-line"><checkbox checked="{{selectedMap[item.id]}}" data-id="{{item.id}}" bindtap="toggleSelect"/><view><view class="record-title">{{item.name}}</view><view class="record-subtitle">{{item.date}} · {{item.spec}}</view></view></label><text class="action-link" data-id="{{item.id}}" bindtap="editRecord">编辑</text></view><view class="record-grid"><view class="kv">数量 <text>{{item.quantity}}</text></view><view class="kv">单价 <text>¥{{item.unitPrice}}</text></view><view class="kv">总金额 <text>¥{{item.amount}}</text></view><view class="kv">用途/备注 <text>{{item.remark}}</text></view></view></view>
 </view>
-<app-nav current="outbound" />

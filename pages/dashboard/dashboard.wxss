@@ -99,33 +99,3 @@
 .compact {
   padding: 20rpx;
 }
-.quick-entry-card {
-  padding: 24rpx;
-  margin-bottom: 22rpx;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20rpx;
-}
-.quick-title {
-  font-size: 30rpx;
-  font-weight: 800;
-  color: #111827;
-}
-.quick-desc {
-  color: #6b7280;
-  font-size: 23rpx;
-  line-height: 1.5;
-  margin-top: 8rpx;
-}
-.quick-btn {
-  flex: 0 0 180rpx;
-  height: 68rpx;
-  line-height: 68rpx;
-  border-radius: 999rpx;
-  color: #fff;
-  font-size: 25rpx;
-  font-weight: 800;
-  background: linear-gradient(90deg, #ff0036, #ff6a00);
-  box-shadow: 0 10rpx 24rpx rgba(255, 0, 54, 0.2);
-}

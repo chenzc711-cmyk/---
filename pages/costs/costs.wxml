@@ -11,4 +11,3 @@
   <view wx:if="{{records.length === 0}}" class="tm-card empty">暂无成本记录</view>
   <view class="tm-card record-card" wx:for="{{records}}" wx:key="id"><view class="record-head"><label class="checkbox-line"><checkbox checked="{{selectedMap[item.id]}}" data-id="{{item.id}}" bindtap="toggleSelect"/><view><view class="record-title">{{item.purpose}}</view><view class="record-subtitle">{{item.expenseDate}} · {{item.category}}</view></view></label><text class="action-link" data-id="{{item.id}}" bindtap="editRecord">编辑</text></view><view class="record-grid"><view class="kv">金额 <text>¥{{item.amount}}</text></view><view class="kv">分类 <text>{{item.category}}</text></view><view class="kv">备注 <text>{{item.remark}}</text></view></view></view>
 </view>
-<app-nav current="costs" />

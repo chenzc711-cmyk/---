@@ -9,13 +9,6 @@
   </view>
 
   <view class="section-title">首页仪表盘</view>
-  <view class="tm-card quick-entry-card">
-    <view>
-      <view class="quick-title">成本登记入口</view>
-      <view class="quick-desc">已改为自定义底部导航，支持 6 个业务页面，也可从这里快速进入成本登记。</view>
-    </view>
-    <button class="quick-btn" bindtap="goCosts">进入成本</button>
-  </view>
   <view class="metric-grid">
     <view class="metric-card" wx:for="{{metrics}}" wx:key="label">
       <view class="metric-label">{{item.label}}</view>
@@ -52,4 +45,3 @@
     </view>
   </view>
 </view>
-<app-nav current="dashboard" />
