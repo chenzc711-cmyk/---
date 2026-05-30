@@ -25,7 +25,6 @@
       { "pagePath": "pages/inbound/inbound", "text": "入库" },
       { "pagePath": "pages/returns/returns", "text": "退货" },
       { "pagePath": "pages/outbound/outbound", "text": "出库" },
-      { "pagePath": "pages/costs/costs", "text": "成本" }
     ]
   },
   "style": "v2",
