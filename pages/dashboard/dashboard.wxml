@@ -1,0 +1,54 @@
+<view class="container">
+  <view class="banner tm-gradient">
+    <view>
+      <view class="banner-kicker">TMALL STYLE WAREHOUSE</view>
+      <view class="banner-title">拾纷电商管理系统</view>
+      <view class="banner-subtitle">商品、库存、出入库、成本一屏掌控</view>
+    </view>
+    <view class="banner-badge">SFDS</view>
+  </view>
+
+  <view class="section-title">首页仪表盘</view>
+  <view class="tm-card quick-entry-card">
+    <view>
+      <view class="quick-title">成本登记入口</view>
+      <view class="quick-desc">微信小程序原生 tabBar 最多支持 5 项，成本登记作为独立页面从这里进入。</view>
+    </view>
+    <button class="quick-btn" bindtap="goCosts">进入成本</button>
+  </view>
+  <view class="metric-grid">
+    <view class="metric-card" wx:for="{{metrics}}" wx:key="label">
+      <view class="metric-label">{{item.label}}</view>
+      <view class="metric-value">{{item.value}}</view>
+      <view class="metric-note">{{item.note}}</view>
+    </view>
+  </view>
+
+  <view class="tm-card panel">
+    <view class="panel-title">本月累计出入库数据</view>
+    <view class="month-grid">
+      <view class="month-item inbound">
+        <text>本月入库</text>
+        <view>{{monthInboundQty}} 件</view>
+        <text>金额 ¥{{monthInboundAmount}}</text>
+      </view>
+      <view class="month-item outbound">
+        <text>本月出库</text>
+        <view>{{monthOutboundQty}} 件</view>
+        <text>金额 ¥{{monthOutboundAmount}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="tm-card panel">
+    <view class="panel-title">库存预警商品</view>
+    <view wx:if="{{warnings.length === 0}}" class="empty compact">暂无低库存商品</view>
+    <view wx:for="{{warnings}}" wx:key="id" class="warning-row">
+      <view>
+        <view class="record-title">{{item.name}}</view>
+        <view class="record-subtitle">{{item.spec}} · {{item.supplier}}</view>
+      </view>
+      <view class="badge">剩 {{item.stock}} / 警 {{item.warningQty}}</view>
+    </view>
+  </view>
+</view>

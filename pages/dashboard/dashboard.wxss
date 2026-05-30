@@ -1,0 +1,131 @@
+.banner {
+  min-height: 260rpx;
+  border-radius: 34rpx;
+  padding: 34rpx;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 28rpx;
+  box-shadow: 0 24rpx 54rpx rgba(255, 0, 54, 0.24);
+}
+.banner-kicker {
+  font-size: 22rpx;
+  letter-spacing: 4rpx;
+  opacity: 0.82;
+}
+.banner-title {
+  font-size: 48rpx;
+  font-weight: 900;
+  margin: 20rpx 0 12rpx;
+}
+.banner-subtitle {
+  font-size: 26rpx;
+  opacity: 0.9;
+}
+.banner-badge {
+  width: 118rpx;
+  height: 118rpx;
+  border-radius: 34rpx;
+  border: 3rpx solid rgba(255,255,255,0.42);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 30rpx;
+}
+.metric-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18rpx;
+}
+.metric-card {
+  padding: 24rpx;
+  border-radius: 26rpx;
+  background: #fff;
+  box-shadow: 0 12rpx 34rpx rgba(17, 24, 39, 0.06);
+}
+.metric-label {
+  color: #6b7280;
+  font-size: 23rpx;
+}
+.metric-value {
+  font-size: 38rpx;
+  font-weight: 900;
+  color: #ff0036;
+  margin: 14rpx 0 8rpx;
+}
+.metric-note {
+  color: #9ca3af;
+  font-size: 22rpx;
+}
+.panel {
+  padding: 26rpx;
+  margin-top: 24rpx;
+}
+.panel-title {
+  font-size: 32rpx;
+  font-weight: 800;
+  margin-bottom: 20rpx;
+}
+.month-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18rpx;
+}
+.month-item {
+  border-radius: 24rpx;
+  padding: 24rpx;
+  color: #fff;
+}
+.month-item view {
+  font-size: 40rpx;
+  font-weight: 900;
+  margin: 12rpx 0;
+}
+.inbound {
+  background: linear-gradient(135deg, #10b981, #34d399);
+}
+.outbound {
+  background: linear-gradient(135deg, #ff0036, #ff6a00);
+}
+.warning-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18rpx 0;
+  border-top: 1rpx solid #f0f1f5;
+}
+.compact {
+  padding: 20rpx;
+}
+.quick-entry-card {
+  padding: 24rpx;
+  margin-bottom: 22rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20rpx;
+}
+.quick-title {
+  font-size: 30rpx;
+  font-weight: 800;
+  color: #111827;
+}
+.quick-desc {
+  color: #6b7280;
+  font-size: 23rpx;
+  line-height: 1.5;
+  margin-top: 8rpx;
+}
+.quick-btn {
+  flex: 0 0 180rpx;
+  height: 68rpx;
+  line-height: 68rpx;
+  border-radius: 999rpx;
+  color: #fff;
+  font-size: 25rpx;
+  font-weight: 800;
+  background: linear-gradient(90deg, #ff0036, #ff6a00);
+  box-shadow: 0 10rpx 24rpx rgba(255, 0, 54, 0.2);
+}
